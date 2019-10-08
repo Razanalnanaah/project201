@@ -1,92 +1,108 @@
 'use strlct';
 var user = prompt(" Can You Please Tell Us Your Name ")
-alert("Welcome You Here " + user + " I wish You Enjoy Knowing Me..")
-var name= prompt('Do you know what my name is??');
+alert("Welcome You Here " + user )
+var counter = 0; 
+var questions =[
+    ['Do you know what my name is??',
+    'WOW!! You made me happy',
+    'Saddened me !! Now you know me',
 
-name = name.toLowerCase();
-if (name =='yes'){
+],
+['Have an idea about what I studied at the university?',
+'GREAT^_^',
+'Its okay !!',
+],
+    [
+    'What about my age do you know??',
+    'hahah Nice ',
+    'never mind',
+   ],
+    [
+    
+        'Do you know my favorite color??',
+       ' Iam so happy haha ',
+       'okay',
+
+    ],
+    [
+        'Are the questions boring??',
+        'Iam so SORRY',
+        'THANK YOU',
+    ]
+
+]
 
 
-    alert(" WOW!! You made me happy");
-    console.log ("WOW!! You made me happy");
-    }else if (name =='y'){
-        alert(" WOW!! You made me happy");
-        console.log ("WOW!! You made me happy");
+
+
+
+
+for (var i=0; i<5; i++){
+    var exactArray = questions[i];
+    var promptQuestion = exactArray[0];
+    var posetiveReply = exactArray[1];
+    var negativeReply = exactArray[2];
+   
+    var name = prompt(promptQuestion);
+    name = name.toLowerCase();
+    switch (name) {
+    case "yes":
+    case "y":
+        counter = counter +1;
+        console.log(name);
+    alert(posetiveReply);
+    break;
+    case "no":
+    case "n":
+            console.log(name);
+    alert(negativeReply);
+    break;
+    default :
+    alert ("Try to solve it") ;
+
+    break;
+    }}
+
+    
+for (var num = 0; num <4; num++){
+    var mark = prompt("Guess  how many times I failed in the university materials??")
+    if (mark ==5){
+        alert("Yes exactly! hahahh");
+        counter = counter+1;
+        console.log(mark);
+        break;
+    } else if (mark>5) {
+        alert ("too high !!");
+        console.log(mark);
+    } else if ( mark< 5){
+        alert(" too low");
+        console.log(mark);
+    }}
+    alert ("5 times hahaha")
+ 
+    var food = ['kabseh', 'mansaf', 'makloba', 'ylngi', 'makhshi', 'shawerma'];
+    for (var count= 0; count <5; count++) {
+       var feedMe = prompt("I love 6 different foods.. Can you guess one of them?");
+       switch (feedMe) {
+           case food[0]:
+           case food[1]:
+           case food[2]:
+           case food[3]:
+           case food[4]:
+           case food[5]:
+               alert(" You are right.. My fav foods are: kabseh, mansaf, makloba, ylngi, makhshi, shawerma");
+               counter = counter + 1;
+               alert ( "You got " +counter+ " points after completing the quiz");
+               console.log(feedMe);
+           count = 5;
+               break;
+           default:
+               alert("You are wrong .. Try it again ")
+               console.log(feedMe);
+               break;
+       }
     }
-    else if (name =='no'){
-    alert("Saddened me !! Now you know me");
-    console.log ("Saddened me !! Now you know me");
-    }
-    
-    var study= prompt('Have an idea about what I studied at the university?');
-
-study = study.toLowerCase();
-if (study =='yes'){
-
-
-    alert("GREAT^_^");
-    console.log ("GREAT^_^");
-    }else if (study =='y'){
-        alert("GREAT^_^ ");
-        console.log ("GREAT^_^");
-    }
-    else if (study =='no'){
-    alert("It's okay !!");
-    console.log ("It's okay !!");
-    }
-    
-    var age= prompt('What about my age do you know??');
-
-    age= age.toLowerCase();
-    if (age =='yes'){
-    
-    
-        alert(" hahah Nice  ");
-        console.log ("hahah Nice ");
-        }else if (age =='y'){
-            alert(" hahah Nice ");
-            console.log ("hahah Nice ");
-        }
-        else if (age =='no'){
-        alert("never mind");
-        console.log ("never mind");
-        }
-
-        var color= prompt('Do you know my favorite color??');
-
-    color= color.toLowerCase();
-    if (color =='yes'){
-    
-    
-        alert(" Iam so happy haha ");
-        console.log (" Iam so happy haha");
-        }else if (color =='y'){
-            alert(" Iam so happy haha ");
-            console.log (" Iam so happy haha");
-        }
-        else if (color =='no'){
-        alert("okay");
-        console.log ("okay");
-        }
-
-        
-        var questions= prompt('Are the questions boring??');
-
-    questions= questions.toLowerCase();
-    if (questions =='yes'){
-    
-    
-        alert(" Iam so SORRY ");
-        console.log ("Iam so SORRY");
-        }else if (questions =='y'){
-            alert(" Iam so SORRY ");
-            console.log ("Iam so SORRY");
-        }
-        else if (questions =='no'){
-        alert("THANK YOU ");
-        console.log ("THANK YOU");
-        }
-
+        alert ("Your points are " + counter)
         alert("Thanks for being here " + user);
         
 
