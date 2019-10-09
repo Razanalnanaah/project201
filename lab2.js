@@ -2,6 +2,8 @@
 var user = prompt(" Can You Please Tell Us Your Name ")
 alert("Welcome You Here " + user )
 var counter = 0; 
+ 
+function guesswhat(){
 var questions =[
     ['Do you know what my name is??',
     'WOW!! You made me happy',
@@ -35,8 +37,6 @@ var questions =[
 
 
 
-
-
 for (var i=0; i<5; i++){
     var exactArray = questions[i];
     var promptQuestion = exactArray[0];
@@ -61,8 +61,11 @@ for (var i=0; i<5; i++){
     alert ("Try to solve it") ;
 
     break;
-    }}
+    }}}
+    guesswhat();
 
+   function failed() {
+       
     
 for (var num = 0; num <4; num++){
     var mark = prompt("Guess  how many times I failed in the university materials??")
@@ -77,8 +80,11 @@ for (var num = 0; num <4; num++){
     } else if ( mark< 5){
         alert(" too low");
         console.log(mark);
-    }}
+    }}}
+    failed();
     alert ("5 times hahaha")
+ function foods() {
+     
  
     var food = ['kabseh', 'mansaf', 'makloba', 'ylngi', 'makhshi', 'shawerma'];
     for (var count= 0; count <5; count++) {
@@ -102,7 +108,8 @@ for (var num = 0; num <4; num++){
                break;
        }
     }
+}
+foods();
         alert ("Your points are " + counter)
-        alert("Thanks for being here " + user);
+        alert("Thanks for being here " + food);
         
-
